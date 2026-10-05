@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Arte Quest - jogo educativo de Arte para alunos do 6º ano."
+    >
+
+    <title>Arte Quest - Aventura no Mundo da Arte</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <span class="logo-icon">🎨</span>
+            <div>
+                <h1>Arte Quest</h1>
+                <p>Aventura no Mundo da Arte</p>
+            </div>
+        </div>
+
+        <div class="decoracao">
+            🎨 🖌️ 🖍️ ✏️
+        </div>
+    </header>
+
+    <main>
+
+        <!-- TELA INICIAL -->
+        <section id="telaInicial" class="tela ativa">
+            <div class="card inicio-card">
+
+                <div class="personagem">🧑‍🎨</div>
+
+                <span class="etiqueta">DESAFIO DE ARTE</span>
+
+                <h2>Você está pronto para criar?</h2>
+
+                <p>
+                    Responda às perguntas, teste seus conhecimentos
+                    e descubra quanto você sabe sobre o mundo da Arte!
+                </p>
+
+                <div class="regras">
+                    <div>
+                        <span>❤️</span>
+                        <strong>3 vidas</strong>
+                    </div>
+
+                    <div>
+                        <span>⭐</span>
+                        <strong>10 perguntas</strong>
+                    </div>
+
+                    <div>
+                        <span>🏆</span>
+                        <strong>Até 1000 pontos</strong>
+                    </div>
+                </div>
+
+                <button id="btnIniciar" class="btn btn-principal">
+                    Começar aventura 🚀
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- TELA DO JOGO -->
+        <section id="telaJogo" class="tela">
+
+            <div class="cabecalho-jogo">
+
+                <div class="info-jogador">
+                    <div class="info">
+                        <span class="info-icone">⭐</span>
+                        <div>
+                            <small>PONTOS</small>
+                            <strong id="pontuacao">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <span class="info-icone">❤️</span>
+                        <div>
+                            <small>VIDAS</small>
+                            <strong id="vidas">❤️❤️❤️</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progresso-container">
+                    <div class="progresso-texto">
+                        <span>Progresso</span>
+                        <strong id="contadorPergunta">1/10</strong>
+                    </div>
+
+                    <div class="barra">
+                        <div id="barraProgresso" class="barra-preenchida"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="card pergunta-card">
+
+                <div class="numero-pergunta" id="numeroPergunta">
+                    PERGUNTA 1
+                </div>
+
+                <h2 id="textoPergunta">
+                    Carregando pergunta...
+                </h2>
+
+                <div id="alternativas" class="alternativas">
+                    <!-- As alternativas serão inseridas pelo JavaScript -->
+                </div>
+
+                <div id="feedback" class="feedback"></div>
+
+                <button
+                    id="btnProxima"
+                    class="btn btn-principal btn-proxima"
+                    disabled
+                >
+                    Próxima pergunta ➜
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TELA FINAL -->
+        <section id="telaFinal" class="tela">
+
+            <div class="card resultado-card">
+
+                <div id="emojiResultado" class="resultado-emoji">
+                    🏆
+                </div>
+
+                <span class="etiqueta">AVENTURA CONCLUÍDA!</span>
+
+                <h2 id="tituloResultado">
+                    Mandou muito bem!
+                </h2>
+
+                <p id="mensagemResultado">
+                    Você terminou o desafio.
+                </p>
+
+                <div class="resultado-pontuacao">
+                    <span>SUA PONTUAÇÃO</span>
+                    <strong id="pontuacaoFinal">0</strong>
+                    <small>pontos</small>
+                </div>
+
+                <div class="estatisticas">
+
+                    <div class="estatistica acertos">
+                        <span>✅</span>
+                        <strong id="acertosFinal">0</strong>
+                        <small>Acertos</small>
+                    </div>
+
+                    <div class="estatistica erros">
+                        <span>❌</span>
+                        <strong id="errosFinal">0</strong>
+                        <small>Erros</small>
+                    </div>
+
+                    <div class="estatistica">
+                        <span>❤️</span>
+                        <strong id="vidasFinal">0</strong>
+                        <small>Vidas restantes</small>
+                    </div>
+
+                </div>
+
+                <div class="classificacao">
+                    <span id="iconeClassificacao">🎨</span>
+                    <strong id="classificacao">
+                        Artista em treinamento
+                    </strong>
+                </div>
+
+                <button id="btnJogarNovamente" class="btn btn-principal">
+                    Jogar novamente 🔄
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            🎨 Arte Quest — Jogo educativo de Arte para o 6º ano
+        </p>
+        <p>
+            Projeto desenvolvido para fins educacionais.
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
